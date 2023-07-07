@@ -33,7 +33,7 @@ hive_generator:
 build_runner:       
 
 ## TODO
- Localization
+ Localization    
  Filter news by country
 
 ## Screenshots
