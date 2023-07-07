@@ -1,5 +1,5 @@
 # News Wire
-A complete news website working perfectly in flutter application. Multiple themes, search functionality, 3D navigation and much more.
+A complete news website working perfectly in flutter application.
 
 ✔️ Cubits <br />
 ✔️ Providers <br />
