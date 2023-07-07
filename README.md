@@ -39,43 +39,43 @@ build_runner:
 ## Screenshots
 
 <p float="left">
-  <img src="https://github.com/mo7amedaliEbaid/inform-me/blob/f0251854616c60bbbb8058d6c83297e23c95f9fd/informme_screenshots/1.jpg" width="120" />
-  <img src="https://github.com/mo7amedaliEbaid/inform-me/blob/f0251854616c60bbbb8058d6c83297e23c95f9fd/informme_screenshots/2.jpg" width="120" /> 
-  <img src="https://github.com/mo7amedaliEbaid/inform-me/blob/f0251854616c60bbbb8058d6c83297e23c95f9fd/informme_screenshots/3.jpg" width="120" />
-   <img src="https://github.com/mo7amedaliEbaid/inform-me/blob/f0251854616c60bbbb8058d6c83297e23c95f9fd/informme_screenshots/4.jpg" width="120" />
-   <img src="https://github.com/mo7amedaliEbaid/inform-me/blob/f0251854616c60bbbb8058d6c83297e23c95f9fd/informme_screenshots/5.jpg" width="120" />
+  <img src="https://github.com/mo7amedaliEbaid/news-wire/blob/584ad65417e6e574a3b5c77cf224e2fcd2aa2938/newswire_screenshots/1.jpg" width="120" />
+  <img src="https://github.com/mo7amedaliEbaid/news-wire/blob/584ad65417e6e574a3b5c77cf224e2fcd2aa2938/newswire_screenshots/2.jpg" width="120" /> 
+  <img src="https://github.com/mo7amedaliEbaid/news-wire/blob/584ad65417e6e574a3b5c77cf224e2fcd2aa2938/newswire_screenshots/3.jpg" width="120" />
+   <img src="https://github.com/mo7amedaliEbaid/news-wire/blob/584ad65417e6e574a3b5c77cf224e2fcd2aa2938/newswire_screenshots/4.jpg" width="120" />
+   <img src="https://github.com/mo7amedaliEbaid/news-wire/blob/584ad65417e6e574a3b5c77cf224e2fcd2aa2938/newswire_screenshots/5.jpg" width="120" />
 </p>
 <p align="center">
   <img width=60%
   height=40%
-  src="https://github.com/mo7amedaliEbaid/inform-me/blob/f0251854616c60bbbb8058d6c83297e23c95f9fd/informme_screenshots/web1.png">
+  src="https://github.com/mo7amedaliEbaid/news-wire/blob/584ad65417e6e574a3b5c77cf224e2fcd2aa2938/newswire_screenshots/web1.png">
 </p>
 
 <p align="center">
   <img width=60%
   height=40%
-  src="https://github.com/mo7amedaliEbaid/inform-me/blob/f0251854616c60bbbb8058d6c83297e23c95f9fd/informme_screenshots/web2.png">
+  src="https://github.com/mo7amedaliEbaid/news-wire/blob/584ad65417e6e574a3b5c77cf224e2fcd2aa2938/newswire_screenshots/web4.png">
 </p>
 
 
 <p align="center">
   <img width=60%
   height=40%
-  src="https://github.com/mo7amedaliEbaid/inform-me/blob/f0251854616c60bbbb8058d6c83297e23c95f9fd/informme_screenshots/web3.png">
+  src="https://github.com/mo7amedaliEbaid/news-wire/blob/584ad65417e6e574a3b5c77cf224e2fcd2aa2938/newswire_screenshots/web2.png">
 </p>
 
 
 <p align="center">
   <img width=40%
   height=40%
-  src="https://github.com/mo7amedaliEbaid/inform-me/blob/f0251854616c60bbbb8058d6c83297e23c95f9fd/informme_screenshots/web4.png">
+  src="https://github.com/mo7amedaliEbaid/news-wire/blob/584ad65417e6e574a3b5c77cf224e2fcd2aa2938/newswire_screenshots/web3.png">
 </p>
 
 
 <p align="center">
   <img width=40%
   height=40%
-  src="https://github.com/mo7amedaliEbaid/inform-me/blob/f0251854616c60bbbb8058d6c83297e23c95f9fd/informme_screenshots/web5.png">
+  src="https://github.com/mo7amedaliEbaid/news-wire/blob/584ad65417e6e574a3b5c77cf224e2fcd2aa2938/newswire_screenshots/web5.png">
 </p>
 
 
