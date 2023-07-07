@@ -1,0 +1,69 @@
+name: news_wire
+description: A new Flutter project.
+
+publish_to: 'none'
+
+
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.0.5 <4.0.0'
+
+
+dependencies:
+  flutter:
+    sdk: flutter
+#  flutter_localizations:
+#   sdk: flutter
+
+  cupertino_icons: ^1.0.2
+  bloc:
+  flutter_bloc:
+  equatable:
+  provider:
+
+  dio:
+
+  hive:
+  hive_flutter:
+
+  intl:
+  url_launcher:
+  shimmer:
+  cached_network_image:
+  lottie:
+  auto_size_text:
+# country_picker:
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+
+  flutter_lints: ^2.0.0
+  hive_generator:
+  build_runner:
+
+flutter:
+
+  uses-material-design: true
+
+  assets:
+ #   - assets/lang/ar.json
+ #  - assets/lang/en.json
+    - assets/lotties/
+    - assets/images/
+
+
+  fonts:
+    - family: Poppins
+      fonts:
+        - asset: assets/fonts/Poppins-Regular.ttf
+        - asset: assets/fonts/Poppins-Medium.ttf
+          weight: 600
+        - asset: assets/fonts/Poppins-Light.ttf
+          weight: 200
+        - asset: assets/fonts/Poppins-Bold.ttf
+          weight: 900
+        - asset: assets/fonts/Poppins-Italic.ttf
+        - asset: assets/fonts/Poppins-SemiBold.ttf
