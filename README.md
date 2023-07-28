@@ -35,7 +35,6 @@ build_runner:
 ## TODO
  Localization    
  Filter news by country  
- The project workspace in trello https://trello.com/w/newswire6
 
 ## Screenshots
 
