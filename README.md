@@ -1,21 +1,19 @@
-# News Wire
-A complete news website working perfectly in flutter application .
-
-✔️ Cubits <br />
-✔️ Providers <br />
-✔️ Multiple themes<br />
-✔️ Search functionality <br />
-✔️ 3D navigation for the app <br />
-✔️ Data caching using hive packages for offline mode for the app<br />
-✔️ Responsive Ui ( Mobile, Tablet, Desktop ) <br />
-
-## Architechture
-✔️ Clean Architechture <br />
+# inform_me
+A complete news website working perfectly in flutter application. Multiple themes, search functionality, 3D navigation and much more.
 
 ## State Management
-✔️ Bloc pattern <br />
+✔️ Bloc && Provider <br />
 
-## Dependencies 
+## Features
+- Multiple themes
+- Search functionality
+- 3D navigation for the app
+- Data caching using hive packages for offline mode for the app
+- Responsive Design ( Mobile, Tablet, Desktop )
+- Browse news by genre
+
+
+## Dependencies
 bloc:       
 flutter_bloc:       
 equatable:      
@@ -30,56 +28,56 @@ cached_network_image:
 lottie:     
 auto_size_text:     
 hive_generator:     
-build_runner:       
+build_runner:
 
 ## TODO
- Localization    
- Filter news by country  
+Localization
+Filter news by country
 
 ## Screenshots
-
+<br />
+<h3>Mobile</h3>
 <p float="left">
-  <img src="https://github.com/mo7amedaliEbaid/news-wire/blob/584ad65417e6e574a3b5c77cf224e2fcd2aa2938/newswire_screenshots/1.jpg" width="150" />
-  <img src="https://github.com/mo7amedaliEbaid/news-wire/blob/584ad65417e6e574a3b5c77cf224e2fcd2aa2938/newswire_screenshots/2.jpg" width="150" /> 
-  <img src="https://github.com/mo7amedaliEbaid/news-wire/blob/584ad65417e6e574a3b5c77cf224e2fcd2aa2938/newswire_screenshots/3.jpg" width="150" />
-   <img src="https://github.com/mo7amedaliEbaid/news-wire/blob/584ad65417e6e574a3b5c77cf224e2fcd2aa2938/newswire_screenshots/4.jpg" width="150" />
-   <img src="https://github.com/mo7amedaliEbaid/news-wire/blob/584ad65417e6e574a3b5c77cf224e2fcd2aa2938/newswire_screenshots/5.jpg" width="150" />
+  <img src="https://github.com/mo7amedaliEbaid/inform-me/blob/f0251854616c60bbbb8058d6c83297e23c95f9fd/informme_screenshots/1.jpg" width="120" />
+  <img src="https://github.com/mo7amedaliEbaid/inform-me/blob/f0251854616c60bbbb8058d6c83297e23c95f9fd/informme_screenshots/2.jpg" width="120" /> 
+  <img src="https://github.com/mo7amedaliEbaid/inform-me/blob/f0251854616c60bbbb8058d6c83297e23c95f9fd/informme_screenshots/3.jpg" width="120" />
+   <img src="https://github.com/mo7amedaliEbaid/inform-me/blob/f0251854616c60bbbb8058d6c83297e23c95f9fd/informme_screenshots/4.jpg" width="120" />
+   <img src="https://github.com/mo7amedaliEbaid/inform-me/blob/f0251854616c60bbbb8058d6c83297e23c95f9fd/informme_screenshots/5.jpg" width="120" />
 </p>
+
+<br />
+<h3>Website</h3>
 <p align="center">
   <img width=60%
   height=40%
-  src="https://github.com/mo7amedaliEbaid/news-wire/blob/584ad65417e6e574a3b5c77cf224e2fcd2aa2938/newswire_screenshots/web1.png">
+  src="https://github.com/mo7amedaliEbaid/inform-me/blob/f0251854616c60bbbb8058d6c83297e23c95f9fd/informme_screenshots/web1.png">
 </p>
-
-<p align="center">
-  <img width=60%
-  height=40%
-  src="https://github.com/mo7amedaliEbaid/news-wire/blob/584ad65417e6e574a3b5c77cf224e2fcd2aa2938/newswire_screenshots/web4.png">
-</p>
-
 
 <p align="center">
   <img width=60%
   height=40%
-  src="https://github.com/mo7amedaliEbaid/news-wire/blob/584ad65417e6e574a3b5c77cf224e2fcd2aa2938/newswire_screenshots/web2.png">
+  src="https://github.com/mo7amedaliEbaid/inform-me/blob/f0251854616c60bbbb8058d6c83297e23c95f9fd/informme_screenshots/web2.png">
 </p>
 
 
 <p align="center">
   <img width=60%
   height=40%
-  src="https://github.com/mo7amedaliEbaid/news-wire/blob/584ad65417e6e574a3b5c77cf224e2fcd2aa2938/newswire_screenshots/web3.png">
+  src="https://github.com/mo7amedaliEbaid/inform-me/blob/f0251854616c60bbbb8058d6c83297e23c95f9fd/informme_screenshots/web3.png">
 </p>
 
 
 <p align="center">
-  <img width=60%
+  <img width=40%
   height=40%
-  src="https://github.com/mo7amedaliEbaid/news-wire/blob/584ad65417e6e574a3b5c77cf224e2fcd2aa2938/newswire_screenshots/web5.png">
+  src="https://github.com/mo7amedaliEbaid/inform-me/blob/f0251854616c60bbbb8058d6c83297e23c95f9fd/informme_screenshots/web4.png">
 </p>
 
-## Video
-https://www.linkedin.com/posts/mo7amedebaid_flutter-bloc-cleanarchitecture-activity-7083107234968158211-5Zkj?utm_source=share&utm_medium=member_desktop
 
-## APK
-https://drive.google.com/drive/folders/1U8lCoHjNzl3ur275QSZLjRAH9UtPiLgO?usp=sharing
+<p align="center">
+  <img width=40%
+  height=40%
+  src="https://github.com/mo7amedaliEbaid/inform-me/blob/f0251854616c60bbbb8058d6c83297e23c95f9fd/informme_screenshots/web5.png">
+</p>
+
+
