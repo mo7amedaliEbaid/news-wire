@@ -15,8 +15,6 @@ A complete news website working perfectly in flutter application. Multiple theme
 ## Demo video
 <a href="https://youtu.be/oiWioSwoKyc"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e1/Logo_of_YouTube_%282015-2017%29.svg/2560px-Logo_of_YouTube_%282015-2017%29.svg.png" width="170"></img></a>
 
-## Download App
-<a href="https://github.com/Mahmoudagha01/ShoPack-App-With-Clean-Architecture/releases/download/v1.0.0-beta/app-release.apk"><img src="https://playerzon.com/asset/download.png" width="200"></img></a>
 
 ## Dependencies
 bloc:       
@@ -48,6 +46,7 @@ Filter news by country
   <img src="https://github.com/mo7amedaliEbaid/news-wire/blob/66b0dbc6338b7f13309e81eb034a0faf86a0c9e9/newswire_screenshots/3.jpg" width="170" />
    <img src="https://github.com/mo7amedaliEbaid/news-wire/blob/66b0dbc6338b7f13309e81eb034a0faf86a0c9e9/newswire_screenshots/4.jpg" width="170" />
    <img src="https://github.com/mo7amedaliEbaid/news-wire/blob/66b0dbc6338b7f13309e81eb034a0faf86a0c9e9/newswire_screenshots/5.jpg" width="170" />
+   <img src="https://github.com/mo7amedaliEbaid/news-wire/blob/c93c071e40e2be79b6bca2ff5e6588da8ad808a0/newswire_screenshots/splashdark.jpg" width="170" />
 </p>
 
 <br />
