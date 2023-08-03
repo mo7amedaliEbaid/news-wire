@@ -48,6 +48,7 @@ Filter news by country
   <img src="https://github.com/mo7amedaliEbaid/news-wire/blob/66b0dbc6338b7f13309e81eb034a0faf86a0c9e9/newswire_screenshots/3.jpg" width="170" />
    <img src="https://github.com/mo7amedaliEbaid/news-wire/blob/66b0dbc6338b7f13309e81eb034a0faf86a0c9e9/newswire_screenshots/4.jpg" width="170" />
    <img src="https://github.com/mo7amedaliEbaid/news-wire/blob/66b0dbc6338b7f13309e81eb034a0faf86a0c9e9/newswire_screenshots/5.jpg" width="170" />
+   <img src="https://github.com/mo7amedaliEbaid/news-wire/blob/bb8f6953ef363089002237e2cf612217a154819b/newswire_screenshots/splashdark.jpg" width="170" />
 </p>
 
 <br />
