@@ -13,7 +13,7 @@ class NewsDataProvider {
     try {
 
       final response = await dio.get(
-      "https://newsapi.org/v2/top-headlines/sources?language=$language",// "https://newsapi.org/v2/top-headlines?country=eg&pages=5&category=sports&language=ar",// 'https://newsapi.org/v2/top-headlines/sources?category=$category',
+      "https://newsapi.org/v2/top-headlines/sources",// "https://newsapi.org/v2/top-headlines?country=eg&pages=5&category=sports&language=language",// 'https://newsapi.org/v2/top-headlines/sources?category=$category',
         options: Options(
           headers: {
             'Authorization':apikey

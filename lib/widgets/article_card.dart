@@ -10,7 +10,6 @@ import '../configs/space.dart';
 import '../models/article/article.dart';
 import '../screens/article_content/article_content.dart';
 
-
 class ArticleCard extends StatelessWidget {
   final Article article;
 
@@ -55,11 +54,16 @@ class ArticleCard extends StatelessWidget {
                   SizedBox(
                     width: AppDimensions.normalize(45),
                     height: AppDimensions.normalize(45),
-                    child: CachedNetworkImage(
-                      imageUrl: article.urlToImage!,
-                      errorWidget:  (context, url, error) => Lottie.asset("assets/lotties/news-icon-animation-customizable.json"),
-                      placeholder: (context, string) {
-                        return Lottie.asset("assets/lotties/news-icon-animation-customizable.json");/*Center(
+                    child:/* article.urlToImage == null
+                        ? Lottie.asset(
+                            "assets/lotties/news-icon-animation-customizable.json")
+                        : */CachedNetworkImage(
+                            imageUrl: article.urlToImage!,
+                            errorWidget: (context, url, error) => Lottie.asset(
+                                "assets/lotties/news-icon-animation-customizable.json"),
+                            placeholder: (context, string) {
+                              return Lottie.asset(
+                                  "assets/lotties/news-icon-animation-customizable.json"); /*Center(
                           child: Text(
                             'News App',
                             style: AppText.b1b!.copyWith(
@@ -67,14 +71,15 @@ class ArticleCard extends StatelessWidget {
                             ),
                           ),
                         );*/
-                      },
-                    ),
+                            },
+                          ),
                   )
                 else
                   SizedBox(
-                    width: AppDimensions.normalize(45),
-                    height: AppDimensions.normalize(45),
-                    child:Lottie.asset("assets/lotties/news-icon-animation-customizable.json") /*Center(
+                      width: AppDimensions.normalize(45),
+                      height: AppDimensions.normalize(45),
+                      child: Lottie.asset(
+                          "assets/lotties/news-icon-animation-customizable.json") /*Center(
                       child: Text(
                         'News App',
                         style: AppText.b1b!.copyWith(
@@ -82,11 +87,11 @@ class ArticleCard extends StatelessWidget {
                         ),
                       ),
                     ),*/
-                  ),
+                      ),
                 Text(
                   DateFormat('EE d, yyyy').format(
                     DateTime.parse(
-                      article.publishedAt!,
+                      article.publishedAt ?? DateTime.now().toString(),
                     ),
                   ),
                   style: AppText.b2,
@@ -99,18 +104,18 @@ class ArticleCard extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(
-                    article.title!,
+                    article.title ?? "",
                     style: AppText.h3b!,
                     maxLines: 2,
                   ),
                   Space.y!,
                   Text(
-                    article.source!.name!,
+                    article.source?.name ?? "",
                     style: AppText.b2b,
                   ),
                   Space.y!,
                   Text(
-                    article.description!,
+                    article.description ?? "",
                     maxLines: 3,
                   )
                 ],

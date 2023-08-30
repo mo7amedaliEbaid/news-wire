@@ -40,18 +40,20 @@ class ArticleContentScreen extends StatelessWidget {
                       ),
                       Space.y!,
                       Text(
-                        article.title!,
+                        article.title ?? "",
                         style: AppText.h1b,
                       ),
                       Space.y!,
-                      CachedNetworkImage(
-                          imageUrl: article.urlToImage!,
-                          errorWidget: (context, url, error) => Lottie.asset(
-                              "assets/lotties/global-mobile-news-network.json"),
-                          placeholder: (context, string) {
-                            return Lottie.asset(
-                                "assets/lotties/global-mobile-news-network.json");
-                          }),
+                      article.urlToImage == null
+                          ? Center(child: Text("No Details Available"))
+                          : CachedNetworkImage(
+                              imageUrl: article.urlToImage!,
+                              errorWidget: (context, url, error) => Lottie.asset(
+                                  "assets/lotties/global-mobile-news-network.json"),
+                              placeholder: (context, string) {
+                                return Lottie.asset(
+                                    "assets/lotties/global-mobile-news-network.json");
+                              }),
                       Space.y1!,
                       Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -61,7 +63,9 @@ class ArticleContentScreen extends StatelessWidget {
                             style: AppText.b2b,
                           ),
                           TextButton(
-                            onPressed: () => launchUrl(Uri.parse(article.url!)),
+                            onPressed: () => article.url == null
+                                ? null
+                                : launchUrl(Uri.parse(article.url!)),
                             child: Row(
                               children: [
                                 Transform.rotate(
@@ -70,7 +74,7 @@ class ArticleContentScreen extends StatelessWidget {
                                 ),
                                 Space.xf(0.25),
                                 Text(
-                                  article.source!.name!,
+                                  article.source?.name ?? "",
                                 ),
                               ],
                             ),
@@ -79,7 +83,7 @@ class ArticleContentScreen extends StatelessWidget {
                       ),
                       Space.y1!,
                       Text(
-                        article.content!,
+                        article.content ?? "",
                       )
                     ],
                   )
@@ -95,7 +99,7 @@ class ArticleContentScreen extends StatelessWidget {
                       ),
                       Space.y!,
                       Text(
-                        article.title!,
+                        article.title ?? "",
                         style: AppText.h1b,
                       ),
                       Space.y!,
@@ -108,7 +112,9 @@ class ArticleContentScreen extends StatelessWidget {
                           ),
                           Space.xf(30),
                           TextButton(
-                            onPressed: () => launchUrl(Uri.parse(article.url!)),
+                            onPressed: () => article.url == null
+                                ? null
+                                : launchUrl(Uri.parse(article.url!)),
                             child: const Icon(Icons.link_rounded),
                           ),
                           Text(
@@ -122,18 +128,19 @@ class ArticleContentScreen extends StatelessWidget {
                         crossAxisAlignment: CrossAxisAlignment.center,
                         mainAxisAlignment: MainAxisAlignment.spaceAround,
                         children: [
+                          article.urlToImage==null?
+                              Center(child: Text("No Image Available"),):
                           CachedNetworkImage(
-                            imageUrl: article.urlToImage!,
-                            width: AppDimensions.normalize(420),
-                            height: AppDimensions.normalize(300),
-                            fit: BoxFit.fill,
+                              imageUrl: article.urlToImage!,
+                              width: AppDimensions.normalize(420),
+                              height: AppDimensions.normalize(300),
+                              fit: BoxFit.fill,
                               errorWidget: (context, url, error) => Lottie.asset(
                                   "assets/lotties/global-mobile-news-network.json"),
                               placeholder: (context, string) {
                                 return Lottie.asset(
                                     "assets/lotties/global-mobile-news-network.json");
-                              }
-                          ),
+                              }),
 
                           Space.x2!,
                           Expanded(
@@ -146,7 +153,7 @@ class ArticleContentScreen extends StatelessWidget {
                                   height: AppDimensions.normalize(200),
                                   child: AutoSizeText(
                                       overflow: TextOverflow.ellipsis,
-                                      article.content!,
+                                      article.content??"",
                                       maxLines: 5,
                                       style: AppText.h1b),
                                 ),

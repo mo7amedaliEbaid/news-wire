@@ -1,3 +1,5 @@
+import 'dart:developer';
+
 import 'package:flutter/material.dart';
 import 'package:hive/hive.dart';
 
@@ -9,7 +11,7 @@ class ThemeProvider extends ChangeNotifier {
   void init() {
     bool? cacheTheme = cache.get('theme');
     isDark = cacheTheme ?? false;
-
+    log(cacheTheme.toString());
     notifyListeners();
   }
 
@@ -19,7 +21,8 @@ class ThemeProvider extends ChangeNotifier {
     isDark = value;
 
     cache.put('theme', value);
-
+    bool? cacheTheme = cache.get('theme');
+    log(cacheTheme.toString());
     notifyListeners();
   }
 }
