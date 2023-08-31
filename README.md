@@ -11,6 +11,7 @@ A complete news website working perfectly in flutter application. Multiple theme
 - Data caching using hive packages for offline mode for the app
 - Responsive Design ( Mobile, Tablet, Desktop )
 - Browse news by genre
+- Firebase Crashlytics
 
 ## Demo videos
 <a href="https://www.youtube.com/playlist?list=PLCWp9wi0RFPtrTOBUzjo4IqnNPuztoZHG"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e1/Logo_of_YouTube_%282015-2017%29.svg/2560px-Logo_of_YouTube_%282015-2017%29.svg.png" width="170"></img></a>
