@@ -22,6 +22,7 @@ class NewsDataProvider {
       );
 
       Map raw = response.data;
+      log(raw.toString());
 
       List newsList = raw['sources'];
      // List newsList = raw['articles'];

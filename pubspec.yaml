@@ -27,6 +27,9 @@ dependencies:
   hive:
   hive_flutter:
 
+  firebase_core:
+  firebase_crashlytics:
+
   intl:
   url_launcher:
   shimmer:

@@ -1,5 +1,8 @@
 import 'dart:developer';
+import 'dart:ui';
 
+import 'package:firebase_core/firebase_core.dart';
+import 'package:firebase_crashlytics/firebase_crashlytics.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -18,12 +21,22 @@ import 'configs/core_theme.dart' as theme;
 //import 'configs/localization.dart';
 import 'cubits/articles/cubit.dart';
 import 'cubits/top_headlines/cubit.dart';
+import 'firebase_options.dart';
 import 'models/article/article.dart';
 import 'models/article/article_source.dart';
 import 'models/news.dart';
 
 void main() async {
+
+  WidgetsFlutterBinding.ensureInitialized();
+
   await Hive.initFlutter();
+
+  await Firebase.initializeApp(
+    options: DefaultFirebaseOptions.currentPlatform,
+  );
+
+  FlutterError.onError = FirebaseCrashlytics.instance.recordFlutterFatalError;
 
   Hive.registerAdapter<News>(NewsAdapter());
   Hive.registerAdapter<Article>(ArticleAdapter());
@@ -32,6 +45,11 @@ void main() async {
   await Hive.openBox('app');
   await Hive.openBox('newsBox');
   await Hive.openBox('articlesbox');
+
+  PlatformDispatcher.instance.onError = (error, stack) {
+    FirebaseCrashlytics.instance.recordError(error, stack, fatal: true);
+    return true;
+  };
 
   runApp(const MyApp());
 }

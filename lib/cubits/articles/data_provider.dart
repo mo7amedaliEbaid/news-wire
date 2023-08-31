@@ -19,6 +19,8 @@ class ArticlesDataProvider {
       );
 
       Map raw = response.data;
+      log(raw.toString());
+
       List articlesList = raw['articles'];
 
       List<Article> articles = List.generate(

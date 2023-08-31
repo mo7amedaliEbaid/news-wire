@@ -182,6 +182,7 @@ class _DashboardMobileState extends State<DashboardMobile> {
                         child: InkWell(
                           hoverColor: Colors.transparent,
                           onTap: () {
+                        //    throw Exception();
                             themeProvider.theme = !themeProvider.theme;
                           },
                           child: Container(
