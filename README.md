@@ -1,10 +1,11 @@
-# News Wire
-A complete news website working perfectly in flutter application. Multiple themes, search functionality, 3D navigation and much more.
+## News Wire
+A complete news website working perfectly in flutter application.
 
-## State Management
-- Bloc && Provider <br />
+### State Management
+- Cubit && Provider <br />
 
-## Features
+### Features
+- Clean Architecture.
 - Multiple themes
 - Search functionality
 - 3D navigation for the app
@@ -13,14 +14,14 @@ A complete news website working perfectly in flutter application. Multiple theme
 - Browse news by genre
 - Firebase Crashlytics
 
-## Demo videos
-<a href="https://www.youtube.com/playlist?list=PLCWp9wi0RFPtrTOBUzjo4IqnNPuztoZHG"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e1/Logo_of_YouTube_%282015-2017%29.svg/2560px-Logo_of_YouTube_%282015-2017%29.svg.png" width="170"></img></a>
+### Demo videos
+<a href="https://www.youtube.com/playlist?list=PLCWp9wi0RFPtrTOBUzjo4IqnNPuztoZHG"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e1/Logo_of_YouTube_%282015-2017%29.svg/2560px-Logo_of_YouTube_%282015-2017%29.svg.png" width="140"></img></a>
 
-## Download App
-<a href="https://github.com/mo7amedaliEbaid/news-wire/releases/download/v1.0.0/news.apk"><img src="https://playerzon.com/asset/download.png" width="170"></img></a>
+### Download App
+<a href="https://github.com/mo7amedaliEbaid/news-wire/releases/download/v1.0.0/news.apk"><img src="https://playerzon.com/asset/download.png" width="150"></img></a>
 
 
-## Dependencies
+### Dependencies
 bloc:       
 flutter_bloc:       
 equatable:      
@@ -39,11 +40,11 @@ build_runner:
 firebase_core:      
 firebase_crashlytics:       
 
-## TODO
+#### TODO
 Localization        
 Filter news by country
 
-## Screenshots
+### Screenshots
 <br />
 <h3>Mobile</h3>
 <p float="left">
@@ -57,11 +58,7 @@ Filter news by country
 
 <br />
 <h3>Website</h3>
-<p align="center">
-  <img width=50%
-  height=40%
-  src="https://github.com/mo7amedaliEbaid/news-wire/blob/66b0dbc6338b7f13309e81eb034a0faf86a0c9e9/newswire_screenshots/web1.png">
-</p>
+
 
 <p align="center">
   <img width=50%
