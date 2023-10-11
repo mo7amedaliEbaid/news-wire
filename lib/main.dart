@@ -7,11 +7,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
-//import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:hive_flutter/adapters.dart';
 import 'package:news_wire/providers/category_provider.dart';
 
-//import 'package:news_wire/providers/locale_provider.dart';
 import 'package:news_wire/providers/tab_provider.dart';
 import 'package:news_wire/providers/theme_provider.dart';
 import 'package:news_wire/screens/dashboard/dashboard.dart';
@@ -108,6 +106,5 @@ class MaterialChild extends StatelessWidget {
         '/top-stories': (context) => const TopStoriesScreen(),
       },
     );
-    //});
   }
 }
