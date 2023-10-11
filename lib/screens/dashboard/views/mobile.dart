@@ -55,7 +55,7 @@ class _DashboardMobileState extends State<DashboardMobile> {
     App.init(context);
 
     final articleCubit = ArticlesCubit.cubit(context);
-    final newsCubit = BlocProvider.of<TopHeadlinesCubit>(context);
+   // final newsCubit = BlocProvider.of<TopHeadlinesCubit>(context);
     final themeProvider = Provider.of<ThemeProvider>(context);
 
     return WillPopScope(
@@ -79,9 +79,6 @@ class _DashboardMobileState extends State<DashboardMobile> {
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
                             AutoSizeText(
-                            /*AppLocalization.of(context)
-                            .getTranslatedValue("title")
-                            .toString(),*/
                               "Get\nInformed",
                               style: AppText.h1b!.copyWith(
                                 fontSize: AppDimensions.normalize(13),
@@ -100,89 +97,11 @@ class _DashboardMobileState extends State<DashboardMobile> {
                         ),
                       ),
                       Space.xm!,
-                    /*  Consumer<LocaleProvider>(builder: (context,localedata,_){
-                        return  Expanded(
-                          child: Stack(
-                            children: [
-                              InkWell(
-                                hoverColor: Colors.transparent,
-                                onTap: () {
-                                  localedata.changelan_status();
-                                  localedata.isenglish == true
-                                      ? localedata.updateLocale(localedata.changeLanguage(
-                                      Language
-                                          .languageList()
-                                          .first, context))
-                                      : localedata.updateLocale(localedata.changeLanguage(
-                                      Language
-                                          .languageList()
-                                          .last, context));
-                                },
-                                child: Container(
-                                  height: AppDimensions.normalize(30),
-                                  width: AppDimensions.normalize(30),
-                                  decoration: BoxDecoration(
-                                    color: themeProvider.isDark
-                                        ? Colors.grey[800]
-                                        : Colors.green[200],
-                                    shape: BoxShape.circle,
-                                  ),
-                                  child: Icon(
-                                    Icons.language,
-                                    color: themeProvider.isDark
-                                        ? Colors.yellow
-                                        : Colors.grey,
-                                    size: AppDimensions.normalize(15),
-                                  ),
-                                ),
-                              ),
-                              Positioned(
-                                  bottom: 0,
-                                  child: localedata.isenglish==true?Text("EN"):Text("Ar"))
-                            ],
-                          ),
-                        );
-                      }),
-                      Space.x!,
-                      Expanded(
-                        child: InkWell(
-                          hoverColor: Colors.transparent,
-                          onTap: () {
-                            showCountryPicker(context: context, onSelect: (Country value){
-                           //   log(value.countryCode);
-                           newsCubit.fetch("",""*//*value.countryCode.toLowerCase().toString()*//*,"");
-                            },
-                              countryListTheme: CountryListThemeData(
-                                backgroundColor:const Color(0xffd5e6b1),
 
-                              )
-                            );
-                          },
-                          child: Container(
-                            height: AppDimensions.normalize(30),
-                            width: AppDimensions.normalize(30),
-                            decoration: BoxDecoration(
-                              color: themeProvider.isDark
-                                  ? Colors.grey[800]
-                                  : Colors.grey[200],
-                              shape: BoxShape.circle,
-                            ),
-                            child: Icon(
-                              Icons.flag,
-                              color: themeProvider.isDark
-                                  ? Colors.yellow
-                                  : Colors.grey,
-                              size: AppDimensions.normalize(15),
-                            ),
-                          ),
-                        ),
-                      ),
-                      Space.x!,*/
                       Expanded(
                         child: InkWell(
                           hoverColor: Colors.transparent,
                           onTap: () {
-                        //    throw Exception();
                             themeProvider.theme = !themeProvider.theme;
                           },
                           child: Container(
@@ -213,9 +132,6 @@ class _DashboardMobileState extends State<DashboardMobile> {
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       Text(
-                       /* AppLocalization.of(context)
-                            .getTranslatedValue("stories")
-                            .toString(),*/
                         "Top Stories",
                         style: AppText.h3b,
                       ),

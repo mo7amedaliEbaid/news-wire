@@ -1,5 +1,4 @@
-
-class AppUtils {
+sealed class AppUtils {
   static const List<String> categories = [
     'general',
     'technology',
@@ -14,6 +13,6 @@ class AppUtils {
     'Top Stories',
     'Articles',
   ];
-  static const String ENGLISH = "en";
-  static const String Arabic = "ar";
+
+  
 }

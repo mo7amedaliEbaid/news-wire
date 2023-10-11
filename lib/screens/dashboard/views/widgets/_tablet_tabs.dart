@@ -12,8 +12,7 @@ class _TabletTabs extends StatelessWidget {
     final tabs = Provider.of<TabProvider>(context);
     final isSelected = tabs.index == entry.key;
 
-    return/* Expanded(
-      child:*/ InkWell(
+    return InkWell(
         onTap: () => tabs.index = entry.key,
         child: AnimatedContainer(
           duration: const Duration(milliseconds: 350),
@@ -36,7 +35,6 @@ class _TabletTabs extends StatelessWidget {
               textAlign: TextAlign.center,
             ),
           ),
-     //   ),
       ),
     );
   }

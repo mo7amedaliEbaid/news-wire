@@ -54,23 +54,13 @@ class ArticleCard extends StatelessWidget {
                   SizedBox(
                     width: AppDimensions.normalize(45),
                     height: AppDimensions.normalize(45),
-                    child:/* article.urlToImage == null
-                        ? Lottie.asset(
-                            "assets/lotties/news-icon-animation-customizable.json")
-                        : */CachedNetworkImage(
+                    child:CachedNetworkImage(
                             imageUrl: article.urlToImage!,
                             errorWidget: (context, url, error) => Lottie.asset(
                                 "assets/lotties/news-icon-animation-customizable.json"),
                             placeholder: (context, string) {
                               return Lottie.asset(
-                                  "assets/lotties/news-icon-animation-customizable.json"); /*Center(
-                          child: Text(
-                            'News App',
-                            style: AppText.b1b!.copyWith(
-                              color: Colors.grey,
-                            ),
-                          ),
-                        );*/
+                                  "assets/lotties/news-icon-animation-customizable.json");
                             },
                           ),
                   )
@@ -79,14 +69,7 @@ class ArticleCard extends StatelessWidget {
                       width: AppDimensions.normalize(45),
                       height: AppDimensions.normalize(45),
                       child: Lottie.asset(
-                          "assets/lotties/news-icon-animation-customizable.json") /*Center(
-                      child: Text(
-                        'News App',
-                        style: AppText.b1b!.copyWith(
-                          color: Colors.grey,
-                        ),
-                      ),
-                    ),*/
+                          "assets/lotties/news-icon-animation-customizable.json")
                       ),
                 Text(
                   DateFormat('EE d, yyyy').format(

@@ -58,8 +58,7 @@ class _ArticleDesktopState extends State<_ArticleDesktop> {
             if (state is ArticlesFetchLoading) {
               return const LinearProgressIndicator();
             } else if (state is ArticlesFetchSuccess) {
-              return /*Expanded(
-                child: */SingleChildScrollView(
+              return SingleChildScrollView(
                   padding: Space.h,
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.stretch,
@@ -69,7 +68,6 @@ class _ArticleDesktopState extends State<_ArticleDesktop> {
                     )
                         .toList(),
                   ),
-               // ),
               );
             } else {
               return const Center(

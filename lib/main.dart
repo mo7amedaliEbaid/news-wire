@@ -6,9 +6,11 @@ import 'package:firebase_crashlytics/firebase_crashlytics.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+
 //import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:hive_flutter/adapters.dart';
 import 'package:news_wire/providers/category_provider.dart';
+
 //import 'package:news_wire/providers/locale_provider.dart';
 import 'package:news_wire/providers/tab_provider.dart';
 import 'package:news_wire/providers/theme_provider.dart';
@@ -18,7 +20,6 @@ import 'package:news_wire/screens/top_stories/top_stories.dart';
 
 import 'package:provider/provider.dart';
 import 'configs/core_theme.dart' as theme;
-//import 'configs/localization.dart';
 import 'cubits/articles/cubit.dart';
 import 'cubits/top_headlines/cubit.dart';
 import 'firebase_options.dart';
@@ -27,7 +28,6 @@ import 'models/article/article_source.dart';
 import 'models/news.dart';
 
 void main() async {
-
   WidgetsFlutterBinding.ensureInitialized();
 
   await Hive.initFlutter();
@@ -69,7 +69,6 @@ class MyApp extends StatelessWidget {
         BlocProvider(create: (_) => ArticlesCubit()),
         BlocProvider(create: (_) => TopHeadlinesCubit()),
         ChangeNotifierProvider(create: (_) => TabProvider()),
-      //  ChangeNotifierProvider(create: (_) => LocaleProvider()),
         ChangeNotifierProvider(create: (_) => ThemeProvider()),
         ChangeNotifierProvider(create: (_) => CategoryProvider()),
       ],
@@ -94,41 +93,21 @@ class MaterialChild extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    log(MediaQuery.of(context).size.width.toString());
-    //return Consumer<LocaleProvider>(builder: (context, localedata, _) {
-      return MaterialApp(
-        /*locale: localedata.locale,
-        localizationsDelegates: [
-          GlobalMaterialLocalizations.delegate,
-          GlobalWidgetsLocalizations.delegate,
-          GlobalCupertinoLocalizations.delegate,
-          AppLocalization.delegate,
-        ],
-        supportedLocales: [
-          Locale('en', 'US'),
-          Locale('ar', 'EG'),
-        ],
-        localeResolutionCallback: (deviceLocale, supportedLocales) {
-          for (var locale in supportedLocales) {
-            if (locale.languageCode == deviceLocale!.languageCode &&
-                locale.countryCode == deviceLocale.countryCode) {
-              return deviceLocale;
-            }
-          }
-          return supportedLocales.first;
-        },*/
-        title: 'News Wire',
-        debugShowCheckedModeBanner: false,
-        themeMode: provider.isDark ? ThemeMode.dark : ThemeMode.light,
-        theme: theme.themeLight,
-        darkTheme: theme.themeDark,
-        initialRoute: '/splash',
-        routes: {
-          '/splash': (context) => const SplashScreen(),
-          '/dashboard': (context) => const DashboardScreen(),
-          '/top-stories': (context) => const TopStoriesScreen(),
-        },
-      );
+    final double availabewidth = MediaQuery.sizeOf(context).width;
+    //  log(availabewidth.toString());
+    return MaterialApp(
+      title: 'News Wire',
+      debugShowCheckedModeBanner: false,
+      themeMode: provider.isDark ? ThemeMode.dark : ThemeMode.light,
+      theme: theme.themeLight,
+      darkTheme: theme.themeDark,
+      initialRoute: availabewidth >= 992 ? '/dashboard' : '/splash',
+      routes: {
+        '/splash': (context) => const SplashScreen(),
+        '/dashboard': (context) => const DashboardScreen(),
+        '/top-stories': (context) => const TopStoriesScreen(),
+      },
+    );
     //});
   }
 }

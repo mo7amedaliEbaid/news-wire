@@ -1,15 +1,6 @@
 part of '../dashboard.dart';
 
-/*class DashboardDesktop extends StatelessWidget {
-  const DashboardDesktop({Key? key}) : super(key: key);
 
-  @override
-  Widget build(BuildContext context) {
-    return const Center(
-      child: Text('Desktop'),
-    );
-  }
-}*/
 
 class DashboardDesktop extends StatefulWidget {
   const DashboardDesktop({Key? key}) : super(key: key);
@@ -74,8 +65,6 @@ class _DashboardDesktopState extends State<DashboardDesktop> {
                           ),
                           Space.x1!,
 
-                          /* Expanded(
-                           child:*/
                           Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
@@ -100,7 +89,6 @@ class _DashboardDesktopState extends State<DashboardDesktop> {
                           size.width < 1138 && size.width > 992
                               ? Container():Expanded(
                                   child: Container(
-                                    //padding: ,
                                     margin: Space.h1,
                                     height: AppDimensions.normalize(30),
                                     width: AppDimensions.normalize(70),
@@ -108,7 +96,6 @@ class _DashboardDesktopState extends State<DashboardDesktop> {
                                         color: themeProvider.isDark
                                             ? Colors.grey[800]
                                             : Colors.grey[200]
-                                        //  shape: BoxShape.circle,
                                         ),
                                     child: Image.asset(
                                       "assets/images/news.png",
@@ -119,14 +106,6 @@ class _DashboardDesktopState extends State<DashboardDesktop> {
                               ,
                           Space.xm!,
 
-                          /*Expanded(
-                          child: Container(
-                              height: AppDimensions.normalize(70),
-                              width: AppDimensions.normalize(70),
-                              child: Lottie.asset("assets/lotties/global-mobile-news-network.json")),
-                        ),*/
-                          /* Expanded(
-                           child:*/
                           Container(
                             padding: Space.all(0.5, 0.4),
                             margin: Space.all(1.5, 0.4),
@@ -153,7 +132,6 @@ class _DashboardDesktopState extends State<DashboardDesktop> {
                                   .toList(),
                             ),
                           ),
-                          // ),
                           Space.x1!,
                         ],
                       ),
@@ -161,13 +139,10 @@ class _DashboardDesktopState extends State<DashboardDesktop> {
                   ),
 
                   Space.y2!,
-                  /* Expanded(
-                    child: */
                   Padding(
                     padding: Space.h1!,
                     child: views[tabs.index],
                   ),
-                  // )
                 ],
               ),
             ),

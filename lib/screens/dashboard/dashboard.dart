@@ -1,13 +1,10 @@
 import 'dart:developer';
 
 import 'package:auto_size_text/auto_size_text.dart';
-//import 'package:country_picker/country_picker.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-//import 'package:inform_me/providers/locale_provider.dart';
 import 'package:intl/intl.dart';
-import 'package:lottie/lottie.dart';
 import 'package:provider/provider.dart';
 import 'package:shimmer/shimmer.dart';
 
@@ -16,13 +13,11 @@ import '../../configs/app.dart';
 import '../../configs/app_dimensions.dart';
 import '../../configs/app_theme.dart';
 import '../../configs/app_typography.dart';
-//import '../../configs/localization.dart';
 import '../../configs/space.dart';
 import '../../configs/ui_props.dart';
 import '../../cubits/articles/cubit.dart';
 import '../../cubits/top_headlines/cubit.dart';
 import '../../models/article/article.dart';
-//import '../../models/language_model.dart';
 import '../../models/news.dart';
 import '../../providers/category_provider.dart';
 import '../../providers/tab_provider.dart';

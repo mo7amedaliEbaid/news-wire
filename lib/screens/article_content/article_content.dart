@@ -124,7 +124,6 @@ class ArticleContentScreen extends StatelessWidget {
                       ),
                       Space.y2!,
                       Row(
-                        // crossAxisAlignment: CrossAxisAlignment.stretch,
                         crossAxisAlignment: CrossAxisAlignment.center,
                         mainAxisAlignment: MainAxisAlignment.spaceAround,
                         children: [
@@ -160,7 +159,6 @@ class ArticleContentScreen extends StatelessWidget {
                               ],
                             ),
                           ),
-                          // Space.y1!,
                         ],
                       ),
                       Space.y2!

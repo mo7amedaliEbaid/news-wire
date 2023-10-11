@@ -13,8 +13,7 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-#  flutter_localizations:
-#   sdk: flutter
+
 
   cupertino_icons: ^1.0.2
   bloc:
@@ -36,7 +35,6 @@ dependencies:
   cached_network_image:
   lottie:
   auto_size_text:
-# country_picker:
 
 dev_dependencies:
   flutter_test:
