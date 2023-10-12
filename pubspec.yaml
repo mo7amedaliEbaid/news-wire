@@ -50,8 +50,6 @@ flutter:
   uses-material-design: true
 
   assets:
- #   - assets/lang/ar.json
- #  - assets/lang/en.json
     - assets/lotties/
     - assets/images/
 
