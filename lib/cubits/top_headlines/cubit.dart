@@ -21,7 +21,7 @@ class TopHeadlinesCubit extends Cubit<TopHeadlinesState> {
 
   final repository = NewsRepository();
 
-  Future<void> fetch(String category,String countrycode,String language) async {
+  Future<void> fetch(String category) async {
     emit(const TopHeadlinesLoading());
 
     try {
@@ -37,7 +37,7 @@ class TopHeadlinesCubit extends Cubit<TopHeadlinesState> {
       }
 
       if (data == null || (difference != null && difference.inHours > 1)) {
-        data = await repository.fetchApi(category,countrycode,language);
+        data = await repository.fetchApi(category);
       }
 
       emit(

@@ -7,13 +7,13 @@ class NewsDataProvider {
   static final cache = Hive.box('newsBox');
   static final appCache = Hive.box('app');
 
-  static Future<List<News>> fetchApi(String category,String countrycode,String language) async {
+  static Future<List<News>> fetchApi(String category) async {
     //cache.clear();
    // appCache.clear();
     try {
 
       final response = await dio.get(
-      "https://newsapi.org/v2/top-headlines/sources",// "https://newsapi.org/v2/top-headlines?country=eg&pages=5&category=sports&language=language",// 'https://newsapi.org/v2/top-headlines/sources?category=$category',
+      "https://newsapi.org/v2/top-headlines/sources",
         options: Options(
           headers: {
             'Authorization':apikey

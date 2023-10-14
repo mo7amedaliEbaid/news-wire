@@ -57,7 +57,7 @@ class _DashboardScreenState extends State<DashboardScreen> {
 
     if (newsCubit.state.data == null || newsCubit.state.data!.isEmpty) {
       newsCubit.fetch(
-        AppUtils.categories[categoryProvider.categoryIndexGet],"",""
+        AppUtils.categories[categoryProvider.categoryIndexGet]
       );
     }
     if (articleCubit.state.data == null || articleCubit.state.data!.isEmpty) {

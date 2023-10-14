@@ -18,7 +18,7 @@ class _CategoryCustomButton extends StatelessWidget {
     return InkWell(
       onTap: () {
         categoryProvider.categoryIndexUpdate = categoryIndex;
-        newsCubit.fetch(categoryName,"","");
+        newsCubit.fetch(categoryName);
       },
       child: AnimatedOpacity(
         duration: const Duration(milliseconds: 350),
