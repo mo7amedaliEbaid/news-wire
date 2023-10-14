@@ -13,28 +13,21 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-
-
   cupertino_icons: ^1.0.2
   bloc:
   flutter_bloc:
   equatable:
   provider:
-
   dio:
-
   hive:
   hive_flutter:
-
   firebase_core:
   firebase_crashlytics:
-
   intl:
   url_launcher:
   shimmer:
   cached_network_image:
   lottie:
-  auto_size_text:
 
 dev_dependencies:
   flutter_test:

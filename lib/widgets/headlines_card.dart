@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:lottie/lottie.dart';
+import 'package:news_wire/utils/app_utils.dart';
 import 'package:provider/provider.dart';
 import 'package:url_launcher/url_launcher.dart';
 
@@ -22,18 +23,11 @@ class HeadlinesCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     App.init(context);
-    Size size = MediaQuery.sizeOf(context);
-/*if(size.width<1575&&size.width>992){
-return ;
-}*/
     final themeProvider = Provider.of<ThemeProvider>(context);
 
     return Container(
-      width: size.width < 1575 && size.width > 992
-          ? AppDimensions.normalize(370)
-          : AppDimensions.normalize(230),
+      width: AppDimensions.normalize(230),
       height: AppDimensions.normalize(50),
-      //double.infinity,
       margin: Space.all(0, 0.5),
       padding: Space.all(0.5, 1),
       decoration: BoxDecoration(
@@ -68,15 +62,7 @@ return ;
                     AppDimensions.normalize(3),
                   ),
                 ),
-                child: Lottie.asset(
-                    "assets/lotties/news-icon-animation-customizable.json") /*Center(
-                child: Text(
-                  news.name.substring(0, 1),
-                  style: AppText.h1b!.copyWith(
-                    color: Colors.grey,
-                  ),
-                ),
-              ),*/
+                child: Lottie.asset(AppUtils.placeholderLottie)
                 ),
             Space.x1!,
             Expanded(

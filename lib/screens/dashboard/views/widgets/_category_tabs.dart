@@ -8,10 +8,7 @@ class CategoryTabs extends StatelessWidget {
     App.init(context);
     return Container(
       padding: Space.v,
-      width: MediaQuery
-          .of(context)
-          .size
-          .width > 1625 ?AppDimensions.normalize(470):double.infinity,
+      width:AppDimensions.normalize(470),
       decoration: BoxDecoration(
         color: AppTheme.c!.background,
         borderRadius: BorderRadius.circular(

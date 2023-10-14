@@ -14,5 +14,8 @@ sealed class AppUtils {
     'Articles',
   ];
 
-  
+  static String splashLottie = "assets/lotties/global-mobile-news-network.json";
+  static String placeholderLottie =
+      "assets/lotties/news-icon-animation-customizable.json";
+  static String newsImage = "assets/images/news.png";
 }

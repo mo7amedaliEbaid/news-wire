@@ -2,6 +2,7 @@ import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 import 'package:lottie/lottie.dart';
+import 'package:news_wire/utils/app_utils.dart';
 
 import '../configs/app_dimensions.dart';
 import '../configs/app_theme.dart';
@@ -54,23 +55,20 @@ class ArticleCard extends StatelessWidget {
                   SizedBox(
                     width: AppDimensions.normalize(45),
                     height: AppDimensions.normalize(45),
-                    child:CachedNetworkImage(
-                            imageUrl: article.urlToImage!,
-                            errorWidget: (context, url, error) => Lottie.asset(
-                                "assets/lotties/news-icon-animation-customizable.json"),
-                            placeholder: (context, string) {
-                              return Lottie.asset(
-                                  "assets/lotties/news-icon-animation-customizable.json");
-                            },
-                          ),
+                    child: CachedNetworkImage(
+                      imageUrl: article.urlToImage!,
+                      errorWidget: (context, url, error) =>
+                          Lottie.asset(AppUtils.placeholderLottie),
+                      placeholder: (context, string) {
+                        return Lottie.asset(AppUtils.placeholderLottie);
+                      },
+                    ),
                   )
                 else
                   SizedBox(
                       width: AppDimensions.normalize(45),
                       height: AppDimensions.normalize(45),
-                      child: Lottie.asset(
-                          "assets/lotties/news-icon-animation-customizable.json")
-                      ),
+                      child: Lottie.asset(AppUtils.placeholderLottie)),
                 Text(
                   DateFormat('EE d, yyyy').format(
                     DateTime.parse(

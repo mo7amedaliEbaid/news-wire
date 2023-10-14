@@ -33,8 +33,7 @@ intl:
 url_launcher:       
 shimmer:        
 cached_network_image:       
-lottie:     
-auto_size_text:     
+lottie:      
 hive_generator:     
 build_runner:       
 firebase_core:      

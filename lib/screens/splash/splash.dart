@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:news_wire/configs/configs.dart';
 import 'package:lottie/lottie.dart';
+import 'package:news_wire/utils/app_utils.dart';
 
 import 'package:provider/provider.dart';
 
@@ -47,7 +48,7 @@ class _SplashScreenState extends State<SplashScreen> {
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            Lottie.asset("assets/lotties/global-mobile-news-network.json"),
+            Lottie.asset(AppUtils.splashLottie),
             Space.y!,
             EntranceFader(
               duration: const Duration(milliseconds: 300),

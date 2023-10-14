@@ -1,8 +1,9 @@
 import 'dart:math' as math;
-import 'package:auto_size_text/auto_size_text.dart';
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:lottie/lottie.dart';
+import 'package:news_wire/responsive/responsive.dart';
+import 'package:news_wire/utils/app_utils.dart';
 
 import 'package:url_launcher/url_launcher.dart';
 
@@ -23,21 +24,15 @@ class ArticleContentScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     App.init(context);
-
     return Scaffold(
       body: SafeArea(
-        child: SingleChildScrollView(
-            padding: Space.all(),
-            child: MediaQuery.of(context).size.width < 1257
-                ? Column(
+        child: !Responsive.isDesktop(context)
+            ? SingleChildScrollView(
+               child: Padding(
+                 padding: Space.all(),
+                 child: Column(
                     crossAxisAlignment: CrossAxisAlignment.stretch,
                     children: [
-                      Align(
-                        alignment: Alignment.centerLeft,
-                        child: BackButton(
-                          onPressed: () => Navigator.pop(context),
-                        ),
-                      ),
                       Space.y!,
                       Text(
                         article.title ?? "",
@@ -48,11 +43,10 @@ class ArticleContentScreen extends StatelessWidget {
                           ? Center(child: Text("No Details Available"))
                           : CachedNetworkImage(
                               imageUrl: article.urlToImage!,
-                              errorWidget: (context, url, error) => Lottie.asset(
-                                  "assets/lotties/global-mobile-news-network.json"),
+                              errorWidget: (context, url, error) =>
+                                  Lottie.asset(AppUtils.splashLottie),
                               placeholder: (context, string) {
-                                return Lottie.asset(
-                                    "assets/lotties/global-mobile-news-network.json");
+                                return Lottie.asset(AppUtils.splashLottie);
                               }),
                       Space.y1!,
                       Row(
@@ -86,84 +80,106 @@ class ArticleContentScreen extends StatelessWidget {
                         article.content ?? "",
                       )
                     ],
-                  )
-                : Column(
-                    mainAxisAlignment: MainAxisAlignment.start,
-                    crossAxisAlignment: CrossAxisAlignment.stretch,
-                    children: [
-                      Align(
-                        alignment: Alignment.centerLeft,
-                        child: BackButton(
-                          onPressed: () => Navigator.pop(context),
+                  ),
+               ),
+            )
+            : Padding(
+              padding: Space.h2!,
+              child: Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  children: [
+                    Flexible(
+                      flex: 1,
+                      child: Padding(
+                        padding: Space.v2!,
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Flexible(
+                              flex: 2,
+                              child: Text(
+                                article.title ?? "",
+                                style: AppText.h2b,
+                              ),
+                            ),
+                            Flexible(
+                                flex: 2,
+                                child: Space.y1!),
+                            Flexible(
+                              flex: 1,
+                              child: Padding(
+                                padding: Space.hf(3),
+                                child: Row(
+                                  mainAxisAlignment: MainAxisAlignment.start,
+                                  children: [
+                                    Text(
+                                      article.author ?? "",
+                                      style: AppText.b2b,
+                                    ),
+                                    Space.x2!,
+                                    Row(
+                                      mainAxisAlignment: MainAxisAlignment.center,
+                                      children: [
+                                        TextButton(
+                                          onPressed: () => article.url == null
+                                              ? null
+                                              : launchUrl(Uri.parse(article.url!)),
+                                          child: const Icon(Icons.link_rounded),
+                                        ),
+                                        Space.x!,
+                                        Text(
+                                          article.source!.name!,
+                                        ),
+                                      ],
+                                    ),
+
+                                  ],
+                                ),
+                              ),
+                            ),
+
+                            Flexible(
+                              flex: 3,
+                              child: Container(
+                                width: AppDimensions.normalize(280),
+                                height: AppDimensions.normalize(150),
+                                child: Center(
+                                  child: Text(
+                                      overflow: TextOverflow.ellipsis,
+                                      article.content ?? "",
+                                      maxLines: 9,
+                                      style: AppText.b1b),
+                                ),
+                              ),
+                            ),
+                          ],
                         ),
                       ),
-                      Space.y!,
-                      Text(
-                        article.title ?? "",
-                        style: AppText.h1b,
-                      ),
-                      Space.y!,
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.start,
-                        children: [
-                          Text(
-                            article.author ?? "",
-                            style: AppText.b2b,
-                          ),
-                          Space.xf(30),
-                          TextButton(
-                            onPressed: () => article.url == null
-                                ? null
-                                : launchUrl(Uri.parse(article.url!)),
-                            child: const Icon(Icons.link_rounded),
-                          ),
-                          Text(
-                            article.source!.name!,
-                          ),
-                        ],
-                      ),
-                      Space.y2!,
-                      Row(
-                        crossAxisAlignment: CrossAxisAlignment.center,
-                        mainAxisAlignment: MainAxisAlignment.spaceAround,
-                        children: [
-                          article.urlToImage==null?
-                              Center(child: Text("No Image Available"),):
-                          CachedNetworkImage(
+                    ),
+                    Flexible(
+                      flex: 1,
+                      child: article.urlToImage == null
+                          ? Center(
+                              child: Text("No Image Available"),
+                            )
+                          : CachedNetworkImage(
                               imageUrl: article.urlToImage!,
                               width: AppDimensions.normalize(420),
                               height: AppDimensions.normalize(300),
-                              fit: BoxFit.fill,
-                              errorWidget: (context, url, error) => Lottie.asset(
-                                  "assets/lotties/global-mobile-news-network.json"),
+                              fit: BoxFit.contain,
+                              errorWidget: (context, url, error) =>
+                                  Lottie.asset(
+                                      AppUtils.placeholderLottie),
                               placeholder: (context, string) {
                                 return Lottie.asset(
-                                    "assets/lotties/global-mobile-news-network.json");
+                                    AppUtils.placeholderLottie);
                               }),
-
-                          Space.x2!,
-                          Expanded(
-                            child: Column(
-                              mainAxisAlignment: MainAxisAlignment.center,
-                              children: [
-                                Space.yf(9),
-                                Container(
-                                  width: AppDimensions.normalize(280),
-                                  height: AppDimensions.normalize(200),
-                                  child: AutoSizeText(
-                                      overflow: TextOverflow.ellipsis,
-                                      article.content??"",
-                                      maxLines: 5,
-                                      style: AppText.h1b),
-                                ),
-                              ],
-                            ),
-                          ),
-                        ],
-                      ),
-                      Space.y2!
-                    ],
-                  )),
+                    )
+                  ],
+                ),
+            ),
       ),
     );
   }

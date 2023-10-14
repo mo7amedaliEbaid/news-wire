@@ -14,20 +14,14 @@ class _TopStoriesDisktop extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             Align(
-              alignment: Alignment.centerLeft,
-              child: MediaQuery.of(context).size.width > 1625
-                  ? Padding(
-                      padding: Space.hf(6.5),
-                      child: Text(
-                        'Top Stories',
-                        style: AppText.h1b,
-                      ),
-                    )
-                  : Text(
-                      'Top Stories',
-                      style: AppText.h1b,
-                    ),
-            ),
+                alignment: Alignment.centerLeft,
+                child: Padding(
+                  padding: Space.hf(6.5),
+                  child: Text(
+                    'Top Stories',
+                    style: AppText.h1b,
+                  ),
+                )),
             Space.y!,
             const CategoryTabs(),
             Space.y1!,

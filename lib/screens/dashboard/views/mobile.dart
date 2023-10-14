@@ -8,11 +8,11 @@ class DashboardMobile extends StatefulWidget {
 }
 
 class _DashboardMobileState extends State<DashboardMobile> {
-  final searchController = TextEditingController();
+  final _searchController = TextEditingController();
 
   @override
   void dispose() {
-    searchController.dispose();
+    _searchController.dispose();
     super.dispose();
   }
 
@@ -55,7 +55,6 @@ class _DashboardMobileState extends State<DashboardMobile> {
     App.init(context);
 
     final articleCubit = ArticlesCubit.cubit(context);
-   // final newsCubit = BlocProvider.of<TopHeadlinesCubit>(context);
     final themeProvider = Provider.of<ThemeProvider>(context);
 
     return WillPopScope(
@@ -78,7 +77,7 @@ class _DashboardMobileState extends State<DashboardMobile> {
                         child: Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
-                            AutoSizeText(
+                            Text(
                               "Get\nInformed",
                               style: AppText.h1b!.copyWith(
                                 fontSize: AppDimensions.normalize(13),
@@ -190,15 +189,15 @@ class _DashboardMobileState extends State<DashboardMobile> {
                   ),
                   Space.y!,
                   CustomTextField(
-                    controller: searchController,
+                    controller: _searchController,
                     hint: 'Search keyword...',
                     textInputType: TextInputType.text,
                     prefixIcon: IconButton(
                       splashRadius: AppDimensions.normalize(8),
                       onPressed: () {
-                        if (searchController.text.isNotEmpty) {
+                        if (_searchController.text.isNotEmpty) {
                           articleCubit.fetch(
-                            keyword: searchController.text.trim(),
+                            keyword: _searchController.text.trim(),
                           );
                         }
                       },

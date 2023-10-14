@@ -1,4 +1,3 @@
-import 'dart:developer';
 import 'dart:ui';
 
 import 'package:firebase_core/firebase_core.dart';
@@ -12,6 +11,7 @@ import 'package:news_wire/providers/category_provider.dart';
 
 import 'package:news_wire/providers/tab_provider.dart';
 import 'package:news_wire/providers/theme_provider.dart';
+import 'package:news_wire/responsive/responsive.dart';
 import 'package:news_wire/screens/dashboard/dashboard.dart';
 import 'package:news_wire/screens/splash/splash.dart';
 import 'package:news_wire/screens/top_stories/top_stories.dart';
@@ -91,15 +91,13 @@ class MaterialChild extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final double availabewidth = MediaQuery.sizeOf(context).width;
-    //  log(availabewidth.toString());
     return MaterialApp(
       title: 'News Wire',
       debugShowCheckedModeBanner: false,
       themeMode: provider.isDark ? ThemeMode.dark : ThemeMode.light,
       theme: theme.themeLight,
       darkTheme: theme.themeDark,
-      initialRoute: availabewidth >= 992 ? '/dashboard' : '/splash',
+      initialRoute: Responsive.isDesktop(context) ? '/dashboard' : '/splash',
       routes: {
         '/splash': (context) => const SplashScreen(),
         '/dashboard': (context) => const DashboardScreen(),
