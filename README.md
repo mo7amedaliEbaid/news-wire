@@ -94,32 +94,12 @@ Filter news by country
 <br />
 <h3>Website</h3>
 
-
-<p align="center">
-  <img width=50%
-  height=70%
-  src="https://github.com/mo7amedaliEbaid/news-wire/blob/66b0dbc6338b7f13309e81eb034a0faf86a0c9e9/newswire_screenshots/web2.png">
+<p float="left">
+  <img src="https://github.com/mo7amedaliEbaid/news-wire/blob/66b0dbc6338b7f13309e81eb034a0faf86a0c9e9/newswire_screenshots/web2.png" width="670" />
+  <img src="https://github.com/mo7amedaliEbaid/news-wire/blob/66b0dbc6338b7f13309e81eb034a0faf86a0c9e9/newswire_screenshots/web3.png" width="670" /> 
+  <img src="https://github.com/mo7amedaliEbaid/news-wire/blob/66b0dbc6338b7f13309e81eb034a0faf86a0c9e9/newswire_screenshots/web4.png" width="670" />
+   <img src="https://github.com/mo7amedaliEbaid/news-wire/blob/66b0dbc6338b7f13309e81eb034a0faf86a0c9e9/newswire_screenshots/web5.png" width="670" />
 </p>
 
-
-<p align="center">
-  <img width=50%
-  height=40%
-  src="https://github.com/mo7amedaliEbaid/news-wire/blob/66b0dbc6338b7f13309e81eb034a0faf86a0c9e9/newswire_screenshots/web3.png">
-</p>
-
-
-<p align="center">
-  <img width=50%
-  height=40%
-  src="https://github.com/mo7amedaliEbaid/news-wire/blob/66b0dbc6338b7f13309e81eb034a0faf86a0c9e9/newswire_screenshots/web4.png">
-</p>
-
-
-<p align="center">
-  <img width=50%
-  height=40%
-  src="https://github.com/mo7amedaliEbaid/news-wire/blob/66b0dbc6338b7f13309e81eb034a0faf86a0c9e9/newswire_screenshots/web5.png">
-</p>
 
 
