@@ -46,6 +46,14 @@ Localization
 Filter news by country
 
 ### Screenshots
+
+
+##### Widget Tree.
+
+<p float="left">
+  <img src="https://github.com/mo7amedaliEbaid/news-wire/blob/ac44262c45e5c57a4419eb823a2c1cbe961d03d6/newswire_screenshots/widget_tree.png" width="570" />
+</p>
+
 <br />
 <h3>Mobile</h3>
 
