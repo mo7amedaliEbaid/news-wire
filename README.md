@@ -65,12 +65,10 @@ Filter news by country
 <h5>Landscape</h5>
 
 <p float="left">
-  <img src="https://github.com/mo7amedaliEbaid/news-wire/blob/0b0f24b8b9b3650cab3bfcea22a02e3e6da7222b/newswire_screenshots/1.jpg" width="170" />
-  <img src="https://github.com/mo7amedaliEbaid/news-wire/blob/66b0dbc6338b7f13309e81eb034a0faf86a0c9e9/newswire_screenshots/2.jpg" width="170" /> 
-  <img src="https://github.com/mo7amedaliEbaid/news-wire/blob/66b0dbc6338b7f13309e81eb034a0faf86a0c9e9/newswire_screenshots/3.jpg" width="170" />
-   <img src="https://github.com/mo7amedaliEbaid/news-wire/blob/66b0dbc6338b7f13309e81eb034a0faf86a0c9e9/newswire_screenshots/4.jpg" width="170" />
-   <img src="https://github.com/mo7amedaliEbaid/news-wire/blob/66b0dbc6338b7f13309e81eb034a0faf86a0c9e9/newswire_screenshots/5.jpg" width="170" />
-   <img src="https://github.com/mo7amedaliEbaid/news-wire/blob/c93c071e40e2be79b6bca2ff5e6588da8ad808a0/newswire_screenshots/splashdark.jpg" width="170" />
+  <img src="https://github.com/mo7amedaliEbaid/news-wire/blob/239453750dbb0e27ed8029474713383c80307ce7/newswire_screenshots/landscape.jpg" width="370" />
+  <img src="https://github.com/mo7amedaliEbaid/news-wire/blob/239453750dbb0e27ed8029474713383c80307ce7/newswire_screenshots/landscape1.jpg" width="370" /> 
+  <img src="https://github.com/mo7amedaliEbaid/news-wire/blob/239453750dbb0e27ed8029474713383c80307ce7/newswire_screenshots/landscape3.jpg" width="370" />
+   <img src="https://github.com/mo7amedaliEbaid/news-wire/blob/239453750dbb0e27ed8029474713383c80307ce7/newswire_screenshots/landscape4.jpg" width="370" />
 </p>
 
 <br />
