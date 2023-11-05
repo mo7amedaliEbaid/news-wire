@@ -7,9 +7,10 @@ A complete news website working perfectly in flutter application.
 ### Features
 - Clean Architecture.
 - Multiple themes
+- News Api => dio
 - Search functionality
 - 3D navigation for the app
-- Data caching using hive packages for offline mode for the app
+- Data caching => hive
 - Responsive Design ( Mobile, Tablet, Desktop )
 - Browse news by genre
 - Firebase Crashlytics
