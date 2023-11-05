@@ -25,162 +25,165 @@ class ArticleContentScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     App.init(context);
     return Scaffold(
-      body: SafeArea(
-        child: !Responsive.isDesktop(context)
-            ? SingleChildScrollView(
-               child: Padding(
-                 padding: Space.all(),
-                 child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.stretch,
-                    children: [
-                      Space.y!,
-                      Text(
-                        article.title ?? "",
-                        style: AppText.h1b,
-                      ),
-                      Space.y!,
-                      article.urlToImage == null
-                          ? Center(child: Text("No Details Available"))
-                          : CachedNetworkImage(
-                              imageUrl: article.urlToImage!,
-                              errorWidget: (context, url, error) =>
-                                  Lottie.asset(AppUtils.splashLottie),
-                              placeholder: (context, string) {
-                                return Lottie.asset(AppUtils.splashLottie);
-                              }),
-                      Space.y1!,
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: [
-                          Text(
-                            article.author ?? "",
-                            style: AppText.b2b,
-                          ),
-                          TextButton(
-                            onPressed: () => article.url == null
-                                ? null
-                                : launchUrl(Uri.parse(article.url!)),
-                            child: Row(
-                              children: [
-                                Transform.rotate(
-                                  angle: math.pi * 0.70,
-                                  child: const Icon(Icons.link_rounded),
-                                ),
-                                Space.xf(0.25),
-                                Text(
-                                  article.source?.name ?? "",
-                                ),
-                              ],
-                            ),
-                          )
-                        ],
-                      ),
-                      Space.y1!,
-                      Text(
-                        article.content ?? "",
-                      )
-                    ],
-                  ),
-               ),
-            )
-            : Padding(
-              padding: Space.h2!,
-              child: Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  crossAxisAlignment: CrossAxisAlignment.center,
+      appBar: AppBar(
+        elevation: 0,
+        leading: GestureDetector(
+          onTap: () => Navigator.pop(context),
+          child: Icon(
+            Icons.arrow_back,
+            size: AppDimensions.normalize(10),
+          ),
+        ),
+      ),
+      body: !Responsive.isDesktop(context)
+          ? SingleChildScrollView(
+              child: Padding(
+                padding: Space.all(),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.stretch,
                   children: [
-                    Flexible(
-                      flex: 1,
-                      child: Padding(
-                        padding: Space.v2!,
-                        child: Column(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            Flexible(
-                              flex: 2,
-                              child: Text(
-                                article.title ?? "",
-                                style: AppText.h2b,
-                              ),
-                            ),
-                            Flexible(
-                                flex: 2,
-                                child: Space.y1!),
-                            Flexible(
-                              flex: 1,
-                              child: Padding(
-                                padding: Space.hf(3),
-                                child: Row(
-                                  mainAxisAlignment: MainAxisAlignment.start,
-                                  children: [
-                                    Text(
-                                      article.author ?? "",
-                                      style: AppText.b2b,
-                                    ),
-                                    Space.x2!,
-                                    Row(
-                                      mainAxisAlignment: MainAxisAlignment.center,
-                                      children: [
-                                        TextButton(
-                                          onPressed: () => article.url == null
-                                              ? null
-                                              : launchUrl(Uri.parse(article.url!)),
-                                          child: const Icon(Icons.link_rounded),
-                                        ),
-                                        Space.x!,
-                                        Text(
-                                          article.source!.name!,
-                                        ),
-                                      ],
-                                    ),
-
-                                  ],
-                                ),
-                              ),
-                            ),
-
-                            Flexible(
-                              flex: 3,
-                              child: Container(
-                                width: AppDimensions.normalize(280),
-                                height: AppDimensions.normalize(150),
-                                child: Center(
-                                  child: Text(
-                                      overflow: TextOverflow.ellipsis,
-                                      article.content ?? "",
-                                      maxLines: 9,
-                                      style: AppText.b1b),
-                                ),
-                              ),
-                            ),
-                          ],
-                        ),
-                      ),
+                    Space.y!,
+                    Text(
+                      article.title ?? "",
+                      style: AppText.h1b,
                     ),
-                    Flexible(
-                      flex: 1,
-                      child: article.urlToImage == null
-                          ? Center(
-                              child: Text("No Image Available"),
-                            )
-                          : CachedNetworkImage(
-                              imageUrl: article.urlToImage!,
-                              width: AppDimensions.normalize(420),
-                              height: AppDimensions.normalize(300),
-                              fit: BoxFit.contain,
-                              errorWidget: (context, url, error) =>
-                                  Lottie.asset(
-                                      AppUtils.placeholderLottie),
-                              placeholder: (context, string) {
-                                return Lottie.asset(
-                                    AppUtils.placeholderLottie);
-                              }),
+                    Space.y!,
+                    article.urlToImage == null
+                        ? Center(child: Text("No Details Available"))
+                        : CachedNetworkImage(
+                            imageUrl: article.urlToImage!,
+                            errorWidget: (context, url, error) =>
+                                Lottie.asset(AppUtils.splashLottie),
+                            placeholder: (context, string) {
+                              return Lottie.asset(AppUtils.splashLottie);
+                            }),
+                    Space.y1!,
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Text(
+                          article.author ?? "",
+                          style: AppText.b2b,
+                        ),
+                        TextButton(
+                          onPressed: () => article.url == null
+                              ? null
+                              : launchUrl(Uri.parse(article.url!)),
+                          child: Row(
+                            children: [
+                              Transform.rotate(
+                                angle: math.pi * 0.70,
+                                child: const Icon(Icons.link_rounded,),
+                              ),
+                              Space.xf(0.25),
+                              Text(
+                                article.source?.name ?? "",
+                              ),
+                            ],
+                          ),
+                        )
+                      ],
+                    ),
+                    Space.y1!,
+                    Text(
+                      article.content ?? "",
                     )
                   ],
                 ),
+              ),
+            )
+          : Padding(
+              padding: Space.h2!,
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: [
+                  Flexible(
+                    flex: 1,
+                    child: Padding(
+                      padding: Space.v2!,
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Flexible(
+                            flex: 2,
+                            child: Text(
+                              article.title ?? "",
+                              style: AppText.h2b,
+                            ),
+                          ),
+                          Flexible(flex: 2, child: Space.y1!),
+                          Flexible(
+                            flex: 1,
+                            child: Padding(
+                              padding: Space.hf(3),
+                              child: Row(
+                                mainAxisAlignment: MainAxisAlignment.start,
+                                children: [
+                                  Text(
+                                    article.author ?? "",
+                                    style: AppText.b2b,
+                                  ),
+                                  Space.x2!,
+                                  Row(
+                                    mainAxisAlignment: MainAxisAlignment.center,
+                                    children: [
+                                      TextButton(
+                                        onPressed: () => article.url == null
+                                            ? null
+                                            : launchUrl(
+                                                Uri.parse(article.url!)),
+                                        child:  Icon(Icons.link_rounded,size: AppDimensions.normalize(20),),
+                                      ),
+                                      Space.x!,
+                                      Text(
+                                        article.source!.name!,
+                                      ),
+                                    ],
+                                  ),
+                                ],
+                              ),
+                            ),
+                          ),
+                          Flexible(
+                            flex: 3,
+                            child: Container(
+                              width: AppDimensions.normalize(280),
+                              height: AppDimensions.normalize(150),
+                              child: Center(
+                                child: Text(
+                                    overflow: TextOverflow.ellipsis,
+                                    article.content ?? "",
+                                    maxLines: 9,
+                                    style: AppText.b1b),
+                              ),
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                  ),
+                  Flexible(
+                    flex: 1,
+                    child: article.urlToImage == null
+                        ? Center(
+                            child: Text("No Image Available"),
+                          )
+                        : CachedNetworkImage(
+                            imageUrl: article.urlToImage!,
+                            width: AppDimensions.normalize(420),
+                            height: AppDimensions.normalize(300),
+                            fit: BoxFit.contain,
+                            errorWidget: (context, url, error) =>
+                                Lottie.asset(AppUtils.placeholderLottie),
+                            placeholder: (context, string) {
+                              return Lottie.asset(AppUtils.placeholderLottie);
+                            }),
+                  )
+                ],
+              ),
             ),
-      ),
     );
   }
 }

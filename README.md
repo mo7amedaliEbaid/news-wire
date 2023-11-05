@@ -15,7 +15,7 @@ A complete news website working perfectly in flutter application.
 - Firebase Crashlytics
 
 ### Demo videos
-<a href="https://www.youtube.com/playlist?list=PLCWp9wi0RFPtrTOBUzjo4IqnNPuztoZHG"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e1/Logo_of_YouTube_%282015-2017%29.svg/2560px-Logo_of_YouTube_%282015-2017%29.svg.png" width="140"></img></a>
+<a href="https://youtu.be/OF0KevpQehI"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e1/Logo_of_YouTube_%282015-2017%29.svg/2560px-Logo_of_YouTube_%282015-2017%29.svg.png" width="140"></img></a>
 
 ### Download App
 <a href="https://github.com/mo7amedaliEbaid/news-wire/releases/download/v1.0.0/news.apk"><img src="https://playerzon.com/asset/download.png" width="150"></img></a>
